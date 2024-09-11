@@ -1,0 +1,144 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>RomaDevGenius</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/css/style.css'%}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  
+<!--
+
+TemplateMo 570 Chain App Dev
+
+https://templatemo.com/tm-570-chain-app-dev
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'assets/css/templatemo-chain-app-dev.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/animated.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/owl.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+
+</head>
+<body>
+
+
+
+
+    {%block content%}
+
+
+
+    {%endblock%}
+
+
+
+    <footer id="newsletter">
+        <div class="container">
+            <div class="row">        
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        <p> © 2024 <span> RomaDevGenius</span> Tous droits réservé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+      <!-- Scripts -->
+      <script src="{%static 'vendor/jquery/jquery.min.js'%}"></script>
+      <script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{%static 'assets/js/owl-carousel.js'%}"></script>
+      <script src="{%static 'assets/js/animation.js'%}"></script>
+      <script src="{%static 'assets/js/imagesloaded.js'%}"></script>
+      <script src="{%static 'assets/js/popup.js'%}"></script>
+      <script src="{%static 'assets/js/custom.js'%}"></script>
+
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const phrases = [
+            "Réalisez vos rêves numériques.",
+            "Transformez votre vision en réalité.",
+            "Rêvez, nous concrétisons."
+        ];
+        
+        const h2 = document.getElementById("animated-h2");
+        let currentPhraseIndex = 0;
+
+        function changePhrase() {
+            h2.textContent = phrases[currentPhraseIndex];
+            h2.style.animation = 'none';
+            h2.offsetHeight; // Trigger reflow to restart animation
+            h2.style.animation = '';
+
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        }
+
+        setInterval(changePhrase, 5000); // Change every 5 seconds
+
+        changePhrase(); // Initial call
+        });
+    </script>
+
+
+    <script>
+        // Faire disparaître l'alerte après 3 secondes
+        setTimeout(function() {
+            var alertBox = document.getElementById('alert-box');
+            if (alertBox) {
+                alertBox.style.display = 'none';
+            }
+        }, 3000);
+    
+        // Remonter jusqu'à l'entête de la page après l'envoi du formulaire
+        window.onload = function() {
+            if (window.location.hash === "#contact") {
+                window.scrollTo(0, 0);
+            }
+        };
+    </script>
+    
+    
+    
+          
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+
+
+</body>
+</html>
